@@ -1,0 +1,24 @@
+@import "~bootstrap/scss/functions" //функции
+@import "~bootstrap/scss/variables" //переменные
+@import "~bootstrap/scss/mixins" //миксины
+%nav
+  display: flex
+  flex-wrap: wrap
+  padding-left: 0
+  margin-bottom: 0
+  list-style: none
+
+%nav-link
+  display: block
+  padding: $nav-link-padding-y $nav-link-padding-x
+  text-decoration: if($link-decoration == none, null, none)
+
+  @include hover-focus()
+    text-decoration: none
+
+
+  // Disabled state lightens text
+%nav-link_disabled
+    color: $nav-link-disabled-color
+    pointer-events: none
+    cursor: default
